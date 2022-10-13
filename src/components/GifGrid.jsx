@@ -1,27 +1,18 @@
-import { useEffect, useState } from "react";
+import { GifItem, LoadingMessage } from "./";
 
-import { GifItem } from "./GifItem";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 
-import { getGifs } from "../helpers/getGifs";
+export const GifGrid = ({category, onDeleteCategory}) => {
 
-export const GifGrid = ({category}) => {
+    const {images, isLoading} = useFetchGifs(category);
 
-    const [images, setImages] = useState([]);
-
-    const getImages = async() => {
-        const newImages = await getGifs(category);
-        setImages(newImages);
-    } 
-
-    // Si se deja el UseEffect con el segundo parametro vacio 
-    //solo se ejecuta la primera vez de creacion del componente
-    useEffect( ()=>{
-        getImages();
-    }, [])
+    const deleteCategory = (event) => onDeleteCategory(category);
 
     return (
         <>
             <h3>{ category }</h3>
+            <LoadingMessage isLoading={isLoading}/>
+            <button onClick={deleteCategory}>delete</button>
             <div className="card-grid">
                 {
                     images.map((image) => (

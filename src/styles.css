@@ -1,21 +1,56 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: rgb(234, 234, 234);
+    background-color: var(--color4);
+    color: var(--color2);
+  }
+
+  :root{
+    --color1: #001600;
+    --color2:#004536;
+    --color3:#ff6f60;
+    --color4:#ffb280;
+    --color5: #ffeeb0;
   }
   
   body {
-    padding: 60px;
+    padding: 30px;
   }
   
   input {
-    background-color: white;
+    background-color: var(--color1);
+    color: var(--color4);
     border-radius: 5px;
     border: 1px solid rgb(97, 32, 158);
-    color: black;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     outline: none;
     padding: 10px 15px;
+    width: 90%;
+  }
+
+  button{
+    background-color: var(--color2);
+    color: var(--color4);
+    font-size: 1.3rem;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 1px var(--color1);
+    margin-bottom: 20px;
     width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .2s;
+  }
+
+  button:hover {
+    background-color: #001600;
+  }
+
+  h1{
+    font-size: 3rem;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--color1);
   }
   
   h2 {
@@ -24,9 +59,12 @@
   
   h3 {
     font-size: 3rem;
-    margin-bottom: 5px;
+    color: var(--color1);
+    margin-bottom: 25px;
+    width: 100%;
+    border-bottom: 2px solid var(--color1);
   }
-  
+
   .card-grid {
     display: flex;
     flex-direction: row;
@@ -37,12 +75,12 @@
   .card {
     align-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--color2);
     border-radius: 10px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.308);
     display: flex;
     flex-direction: column;
-    height: 0%;  
+    height: 0%;
     justify-content: center;
     margin-bottom: 20px;
     margin-right: 20px;
@@ -50,14 +88,45 @@
   }
   
   .card p {
-    background-color: white;
+    background-color: #004536;
+    color: var(--color4);
     flex: 1;
-    font-size: 1.5rem;
-    margin-top: 5px;
+    font-size: 1.1rem;
     padding: 5px 20px 0px 20px;
     text-align: center;
+    text-transform: capitalize;
   }
   
   .card img {
     width: 100%;
   }
+  /*-----------------------Loader*/
+  .lds-circle {
+    display: inline-block;
+    transform: translateZ(1px);
+  }
+  .lds-circle > div {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    background: #fff;
+    animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  @keyframes lds-circle {
+    0%, 100% {
+      animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(1800deg);
+      animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% {
+      transform: rotateY(3600deg);
+    }
+  }
+  

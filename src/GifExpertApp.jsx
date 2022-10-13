@@ -5,12 +5,12 @@ export const GifExpertApp = () => {
 
     const [categories, setCategories] = useState([ 'Naruto' ]);
 
-    const onAddCategory = (newCategorie) =>{
+    const onAddCategory = (newCategorie) => {
         if( categories.includes(newCategorie) ) return;
         setCategories([newCategorie ,...categories])
     } 
 
-    const onDeleteCategory = (categorieToDelete) =>{
+    const onDeleteCategory = (categorieToDelete) => {
       setCategories(categories.filter( categorie => categorie !== categorieToDelete))
     } 
 

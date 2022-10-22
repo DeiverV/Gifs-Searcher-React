@@ -1,4 +1,5 @@
 import { GifItem, LoadingMessage } from "./";
+import PropTypes from "prop-types"
 
 import { useFetchGifs } from "../hooks/useFetchGifs";
 
@@ -23,4 +24,8 @@ export const GifGrid = ({category, onDeleteCategory}) => {
         </>
     )
 
+}
+
+GifGrid.propTypes = {
+    category: PropTypes.string.isRequired
 }

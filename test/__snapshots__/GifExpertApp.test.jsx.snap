@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en GifExpertApp Debe estar solamente Naruto como default en categories  1`] = `
+<div>
+  <h1>
+    GifExpertApp
+  </h1>
+  <form
+    aria-label="form"
+  >
+    <input
+      placeholder="Buscar Gifs"
+      type="text"
+      value=""
+    />
+  </form>
+  <h3>
+    Naruto
+  </h3>
+  <h3>
+    Loading...
+  </h3>
+  <button>
+    delete
+  </button>
+  <div
+    class="card-grid"
+  />
+</div>
+`;

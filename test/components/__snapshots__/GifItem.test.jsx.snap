@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in GifItem Component should render a gif 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Dragon ball gif"
+      src="http://wtfmomento.com/hola.jpg"
+    />
+    <p>
+      Dragon ball gif
+    </p>
+  </div>
+</div>
+`;
